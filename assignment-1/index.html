@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bookstore</h1>
+        <img src="./img/Creative-Tail-People-man-2.svg.png" alt="" class="avarta">
+        <p class="name">John Doe</p>
+    </header>
+    <main>
+        <div id="tool">
+            <input type="text" placeholder="Search books" class="search" oninput="searchBook()" id="search">
+            <button class="add-book">Add book</button>
+        </div>
+        <table id="table-content">
+            <thead>
+              <tr>
+                <th class="column1">Name</th>
+                <th class="column2">Author</th>
+                <th class="column3">Topic</th>
+                <th class="column4">Action</th>
+              </tr>
+            </thead>
+            <tbody id="listBook">
+              
+            </tbody>
+        </table>
+        
+    </main>
+    <div id="form-delete" class="modal">
+        <div class="modal-content content-delete">
+            <div class="form-delete-header">
+                <b>Delete book</b>
+                <div class="close">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div>
+                <p id="delete-content"></p>
+            </div>
+            <div class="button-confirm-container">
+                <div class="button-confirm">
+                    <button class="confirm-yes">Delete</button>
+                    <button class="confirm-no close">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form-add" class="modal">
+        <div class="modal-content" id="modal-content-add">
+            <div class="form-add-header">
+                <b>Add book</b>
+                <div class="close">
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                </div>
+            </div>
+            <form action="" id="form-content-add">
+                <div class="form-content">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                    <label for="name">Author</label>
+                    <input type="text" id="author" required>
+                    <label for="name">Topic</label>
+                    <select id="topic">
+                        <option value="Programming">Programming</option>
+                        <option value="Database">Database</option>
+                        <option value="DevOps">DevOps</option>
+                    </select>
+                </div>
+                <div class="create" id="btn-create">
+                    <button type="submit">Create</button>
+                </div>
+            </form>
+        </div>
+        
+        
+    </div>
+    <script src="/renderbook.js"></script>
+    <script src="/openmodal.js"></script>
+    <script src="/additem.js"></script>
+</body>
+</html>
